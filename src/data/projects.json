@@ -1,0 +1,42 @@
+{
+    "projects": [
+        {
+            "complete": true,
+            "slug": "ansell",
+            "name": "Ansell"
+        },
+        {
+            "complete": true,
+            "slug": "door3",
+            "name": "DOOR3"
+        },
+        {
+            "complete": true,
+            "slug": "my-knovel-togo",
+            "name": "My Knovel ToGo"
+        },
+        {
+            "complete": true,
+            "slug": "njit",
+            "name": "NJIT"
+        },
+        {
+            "complete": true,
+            "slug": "queens-library",
+            "name": "Queens Library"
+        },
+        {
+            "slug": "stadium",
+            "name": "Stadium"
+        },
+        {
+            "complete": true,
+            "slug": "cognex",
+            "name": "Cognex"
+        },
+        {
+            "slug": "knovel-data-analytics",
+            "name": "Knovel Data Analytics"
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{% set imgPath = '/assets/img/projects/my-knovel-togo/' %}
+{% include 'partials/header.twig' with {
+    'title': 'My Knovel ToGo',
+    'description': ''
+} %}
+<section>
+    <h1 class="project-title">My Knovel ToGo <span class="project-dates">2018</span></h1>
+    <div class="summary">
+        <h3>About the project</h3>
+        <p>My Knovel ToGo is the companion native mobile app to Knovel, an online library of science and engineering textbooks and other materials. The previous version of the app was rather barebones, and the Knovel team wanted guidance on what to include in the next version.</p>
+
+        <h3>Challenge</h3>
+        <p>We set out to gather insights from user research, and user testing of prototypes, but ultimately we'd have to make the case for our findings in such a way that they would actually influence the app's development.</p>
+
+        <h3>My role</h3>
+        <ul>
+            <li>Led workshops with client stakeholders to gather and prioritize ideas for product features</li>
+            <li>Interviewed users of the current app to assess their needs, compared to client priorities</li>
+            <li>Created wireframes integrating stakeholder and user feedback</li>
+            <li>Review those wireframes with users in order to further refine key proposed features</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>My first step was to understand the client's vision for the next version of the app.</h2>
+    <p>Later on, we'd have only a limited amount of time to do research and testing with users, so we had to be sure the project focused on features we thought would have the most impact, as well as those we needed to flesh out the most. For example, implementing fingerprint-based authentication in the app was likely to have only a small impact on user satisfaction, and would have a straightforward implementation on both iOS or Android.</p>
+    <p>Over a series of in-person workshops, I worked with a team of stakeholders from across the Knovel organization to:</p>
+    <ul>
+        <li>Generate ideas for features for the next version of the app</li>
+        <li>Work together to develop a shared understanding of those feature ideas</li>
+        <li>Prioritize those feature ideas according to how important we thought they would be to users</li>
+    </ul>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'client-workshop',
+                'alt': 'On site running a client workshop.'
+            }
+        %}
+        <figcaption>
+            The master at work (second from right), leading a workshop with stakeholders based on the <a href="https://methods.18f.gov/discover/kj-method/" target="_blank" rel="nofollow noopener">KJ method</a>.
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Next, it was time to hear what users wanted from the app.</h2>
+    <p>The Knovel team put in touch with several users of the existing app, who we interviewed to learn more about the app fit into their workflow. The client wanted to be sure we would leave this phase of the project with a clear &ldquo;yes or no&rdquo; to each of the features we had defined previously, but I did my best to balance that with understanding more broadly what was important to each of the interviewees.</p>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'findings',
+                'alt': 'A page from the research findings report.'
+            }
+        %}
+        <figcaption>
+            We grouped features into groups like &ldquo;Search&rdquo; in order to make the research findings easier to digest. In this case, we see the client was right to assume that these features were important, and also some of my recommendations based on research findings.
+        </figcaption>
+    </figure>
+    <p>During the research phase, I also looked at other mobile apps, especially other e-readers, to understand what they were doing that potential users of My Knovel ToGo have come to expect from this type of app.</p>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'competitive-research',
+                'alt': 'Another page from the research findings report.'
+            }
+        %}
+        <figcaption>
+            I used other apps where possible to show working examples of proposed features. In this case, I'm pointing out some of the search-related features of Google Maps and Twitter that are relevant to My Knovel ToGo.
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Once we heard from stakeholders and users what they wanted, it was time to bring that to life.</h2>
+    <p>Again, due to the limited time we'd have to test wireframes with users, we chose to focus on some key elements of the future app:</p>
+    <ul>
+        <li><strong>Logging in:</strong> Surprising complex, given all of the ways one can access their company's or university's Knovel subscription</li>
+        <li><strong>Browsing materials:</strong> Users said they sometimes wanted a more curated experience, like other e-readers or online bookstores.</li>
+        <li><strong>Searching materials:</strong> There were a lot of advanced search features on desktop that needed to make their way to the app.</li>
+        <li><strong>Taking notes within materials:</strong> Again, previously only on desktop, but a key feature of any e-reader.</li>
+        <li>Clearly and simply syncing user activity between desktop and mobile</li>
+    </ul>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'mobile-wireframes',
+                'alt': 'Just some of the wireframes created for this project.'
+            }
+        %}
+        <figcaption>
+            Just some of the wireframes representing key screens from the features we tested.
+        </figcaption>
+    </figure>
+
+    <p>We walked users through wireframed versions of these key flows, and made notes of the parts that were confusing, or missing features they expected to see. These findings then made their way into our final research report.</p>
+</section>
+
+<section>
+    <h2>Finally, I put it all together into one last report.</h2>
+    <p>Over the course of a few months, I learned what the client and their customers wanted to see in the next version of My Knovel ToGo, and took a shot at meeting the needs of both groups, at least in wireframes. Now that those wireframes had been put in front of users, it was time to make one last set of recommendations as to how these wireframes could be further refined, and what to focus on next when the full app was designed and built.</p>
+    <p>Unfortunately, due to budget constraints, this project hasn't gone any further just yet, but the agency where I did this work has continued to do work with the Knovel team, which suggests they were happy with what they learned. Looking forward to seeing where the app goes next.</p>
+</section>
+{% include 'partials/footer.twig' %}

@@ -1,0 +1,159 @@
+{% set imgPath = '/assets/img/projects/queens-library/' %}
+{% set videoPath = '/assets/video/projects/queens-library/' %}
+{% include 'partials/header.twig' with {
+    'title': 'Queens Library',
+    'description': ''
+} %}
+<section>
+    <h1 class="project-title">Queens Library <span class="project-dates">2016</span></h1>
+    <div class="summary">
+        <h2 class="sr-only">Project summary</h2>
+        <h3>About the project</h3>
+        <p>Queens Library, the library system serving the most diverse county in the United States, wanted to rearchitect and redesign their site to help all Queens residents to take advantage of their offerings.</p>
+        <h3>The challenge</h3>
+        <p>People think of a library as just a place to borrow books, movies, and more. But the Queens Library wanted to also highlight the vital services they provide to Queens' 2.4 million residents. So we had to make it easy to check out materials while also surfacing the library's other programs and services.</p>
+        <h3>My role</h3>
+        <ul>
+            <li>Documented existing site map and related sites</li>
+            <li>Synthesized findings from stakeholder interviews</li>
+            <li>Analyzed results of card sorting exercise</li>
+            <li>Defined updated information architecture</li>
+            <li>Created wireframes (desktop and mobile)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>My first job was to map out the library's existing online presence.</h2>
+    <p>I started by creating a site map for the hundreds of pages on the site. I also documented the library's &ldquo;digital ecosystem&rdquo;: partner sites, apps, and social networking accounts.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'existing-site-map',
+                'alt': 'Part of the existing site map.'
+            }
+        %}
+        <figcaption>
+            Parts of the existing site map and digital ecosystem diagram.
+        </figcaption>
+    </figure>
+
+    <p>With all this content accounted for, the team could decide how to best focus the redesign effort.</p>
+</section>
+
+<section>
+    <h2>Next, I created personas from the stakeholders' existing research.</h2>
+    <p>Queens Library serves its community in many ways beyond just lending books. They offer language classes, job training, help with applying for citizenship, and much more. The client team wanted to be sure we would consider all of these services during the design process.</p>
+    <p>All the people with whom the library interacts translated into 12 personas. We called four of these our primary personas. The others were still documented, but not the focus of the redesign.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'persona',
+                'alt': 'One of the primary personas.'
+            }
+        %}
+        <figcaption>
+            One of the primary personas: Audrey, the older adult.
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>We ran a card sort of all the site's main content, and I analyzed the results.</h2>
+
+    <p>We heard from dozens of Queens Library employees, as well as some of their most engaged customers. Comparing employees' view of the site compared to customers' provided many useful insights.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'card-sort-1',
+                'alt': 'One major finding from the card sort.'
+            }
+        %}
+
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'card-sort-2',
+                'alt': 'Suggested top-level navigation from the card sort.'
+            }
+        %}
+        <figcaption>
+            Parts of the findings from the card sort exercise (performed via OptimalSort).
+        </figcaption>
+    </figure>
+
+    <p>For example, we found that customers saw everything you could check out from the library as one unit. But the site grouped materials by Books (books and e-books) and Entertainment (everything else).</p>
+    <p>I also found patterns in the way participants grouped the site's pages. This influenced how we grouped pages in the new navigation, and how we labeled those groups.</p>
+</section>
+
+<section>
+    <h2>I started to build the new site map.</h2>
+    <p>Using our research as a guide, I started to lay out the architecture of the new Queens Library site. After incorporating feedback from my teammates and the client, we were ready for wireframing.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'site-map-post-its',
+                'alt': 'Some of the new site map, in Post-it form.'
+            }
+        %}
+        <figcaption>
+            Just some of the first draft of the new site map.
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Finding and checking out materials was a major focus during wireframing.</h2>
+    <p>Generally, each unique printing of a book has a unique ISBN (like a UPC for printed materials). The hardcover, paperback, 3rd edition, large print, and so on, each get their own ISBN.</p>
+    <p>The existing site's search function treated each ISBN as unique. That meant users were asked to choose between several formats and printings of the same work. But in most cases, they just wanted whichever one they could get the fastest.</p>
+    <p>I designed a few different ways around this problem. In one version, I grouped search results by format. All print copies of a book made up one result, while e-books, audiobooks, etc., were separate. As shown below, one could still access the other formats, or check out a specific printing.</p>
+
+    <figure>
+        {% include 'partials/video.twig' with { 'baseURL': videoPath ~'check-out-1' } %}
+        <figcaption>
+            This result is for the printed book, but the user can access the other formats. When requesting a copy, they'll get whatever's most convenient for the library by default, unless they choose a specific ISBN, as shown.
+        </figcaption>
+    </figure>
+
+    <p>I also tried grouping book formats into two results per work: those you read and those you listen to. See how that check out process would have worked below.</p>
+
+    <figure>
+        {% include 'partials/video.twig' with { 'baseURL': videoPath ~'check-out-2' } %}
+        <figcaption>
+            This version made the process of requesting a specific format of a work much clearer, and surfaced some common format preferences (e.g. hardcover vs. paperback).
+        </figcaption>
+    </figure>
+
+    <p>Unfortunately, the necessary back-end development wasn't possible on the client's timeline. So we had to stick with one search result per ISBN. But that made the checkout process straightforward: choose a pickup location, click Request, done!</p>
+</section>
+
+<section>
+    <h2>After wireframing, the rest of the team focused on the visual design.</h2>
+    <p>I helped by gathering inspiration from sites with a similar mission or audience. I also took on some project management responsibilities. And of course, I still offered my feedback or input when appropriate.</p>
+    <p>We wanted the home page to showcase how Queens Library can &ldquo;enrich your life&rdquo;, per their tagline. I created several headlines in the format, <em>&ldquo;At Queens Library you can...&rdquo;</em>. For example, &ldquo;At Queens Library, you can take the first step towards a new career.&rdquo; This concept ended up as the centerpiece of the new home page design.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'home-page',
+                'alt': 'The final visual design for the home page.'
+            }
+        %}
+        <figcaption>
+            The final visual design for the home page.
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <p>Thanks to Rick Cornett, Patty Evanoff, Chris Macholz, and Ara Ko for all their great work on this project, as well as DOOR3 and Queens Library for making it possible.</p>{% include 'partials/footer.twig' %}
+</section>

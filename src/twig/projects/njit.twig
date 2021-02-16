@@ -1,0 +1,115 @@
+{% set imgPath = '/assets/img/projects/njit/' %}
+{% include 'partials/header.twig'  with {
+    'title': 'NJIT',
+    'description': ''
+} %}
+<section>
+    <h1 class="project-title">NJIT <span class="project-dates">2017</span></h1>
+    <div class="summary">
+        <h3>About the project</h3>
+        <p>The New Jersey Insitute of Technology, or NJIT, is a STEM-focused university serving over 11,000 students from its Newark, NJ campus. The goal of this project was to increase interest in NJIT among prospective students, increase applications and the quality thereof.</p>
+        <h3>Challenge</h3>
+        <p>We had to redesign the site to attract new students, while also keeping in mind the needs of the entire university: current students, staff, faculty, researchers, and more.</p>
+        <h3>My role</h3>
+        <ul>
+            <li>Synthesized existing client research, as well as best practices for university sites</li>
+            <li>Proposed new information architecture, and tested with users</li>
+            <li>Created wireframes and component-based design system for final implementation</li>
+            <li>Led presentations to gather consensus stakeholder feedback</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>First, I had to get an idea of all of the content we had to deal with.</h2>
+    <p>This was my first foray into using site spidering tools to automate the process of understanding the existing information architecture. Unsurprisingly, we uncovered thousands of pages, and hundreds of subdomains – not unexpected for a university with over 10,000 students.</p>
+    <p>Unfortunately for those students, all of this content was presented using one of several design templates. Just by clicking a link to a certain office or department, it was as if you'd traveled to a totally different site, with no connection to the previous page.</p>
+    <p>Furthermore, most of the content on the site was organized on subsites for the part of the university that published it, rather than where users would expect it to be. For instance, prospective students or parents looking for information about next year's tuition would need to figure out first that that was the responsibility of the Office of the Bursar.</p>
+</section>
+
+<section>
+    <h2>Because the main site was to be for prospective students first, I reorganized the site with that in mind.</h2>
+    <p>Most of the marketing content for prospective students was organized into four major sections: <strong>Admissions</strong>, <strong>Academics</strong>, <strong>Research</strong>, and <strong>Life at NJIT</strong>. Visitors could get an overview of a topic in higher-level page (say, <strong>Life at NJIT > Housing & Dining > On-Campus Dining</strong>). If they wanted to, they could delve further into detailed content cross-linked from the relevant part of the university (say, dining hall menus on the Gourment Dining Services sub-site).</p>
+    <p>Another key part of the information architecture was a role-based navigation called <strong>&ldquo;Info For...&rdquo;</strong>. At the top level, you'd identify yourself as a student, faculty or staff member, alumnus, and more. But from there you'd navigate not by the university's structure, but the nature of your issue.</p>
+    <p>For example, a current undergrad student would start in the section for <strong>Students</strong>, then click on <strong>Student Financial Aid</strong>, then <strong>Applying for Financial Aid</strong>, then <strong>For Undergrads</strong>. On this page, they would see an overview of how to apply, with links off to all of the forms and details within the Student Financial Aid Services office site.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'info-for',
+                'alt': 'An example of the "Info For..." concept.'
+            }
+        %}
+        <figcaption>
+            An example of the &ldquo;Info For...&rdquo; concept at work, from the visual design phase. At a certain point, we can't help the depth of the navigation, but we can label things to help users make confident choices as they go.
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Another key feature was explaining to prospective students what they could study at NJIT.</h2>
+    <p>On the previous NJIT site, high school students trying to explore the different majors at NJIT were stuck browsing an alphabetical list of all the degree programs the university offered. For a 17-year-old who maybe wanted to be an architect one day, choosing between 15 degree programs with &ldquo;architecture&rdquo; in the name wasn't an ideal experience. Once you chose one of the 15, you'd be presented with detailed information more suited for current students, like a directory of the faculty who teach within that degree, and a list of all the classes required to complete it.</p>
+    <p>We proposed replacing the list of degree programs with an interactive tool helping students browse &ldquo;majors&rdquo;, each representing one or more degree program. For NJIT's 126 degree programs, there were only a few dozen majors.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'major-finder',
+                'alt': 'A screenshot of the proposed Major Finder.'
+            }
+        %}
+        <figcaption>
+            Using the Major Finder, prospective students had (intentionally) fewer options to choose from, which could be filtered by their area of interest.
+        </figcaption>
+    </figure>
+
+    <p>Once a student selected a major, the content on the subsequent &ldquo;major landing page&rdquo; was geared directly to prospective students and their parents. The focus was on answering questions like:</p>
+    <ul>
+        <li>What type of person would most enjoy a career in this field?</li>
+        <li>What type of jobs do NJIT graduates in this field typically get, and at which companies?</li>
+        <li>How much is the typical starting and mid-career salary in this field?</li>
+    </ul>
+    <p>
+        If a student wanted to go further and learn about the classes they might have to take, the professors they would be learning from, and more, these pages would link to each of the associated degree programs.
+    </p>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'major-landing-page',
+                'alt': 'A screenshot of a sample major landing page.'
+            }
+        %}
+        <figcaption>
+            The content of these major landing pages was meant to answer a 17-year-old asking: &ldquo;Why should I want to study <em>this</em> at NJIT?&rdquo;
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h2>Such a wide range of content, and a wide range of content creators, meant we had to deliver a design system, not a set of mockups.</h2>
+    <p>To make the designs we were creating easier not only to build, but to deploy, we defined it in terms of &ldquo;bricks&rdquo;, or components. Content creators would select a page template (say, left sidebar, right sidebar, or no sidebars), and build pages as sets of bricks. (These bricks could optionally be grouped into layouts to, say, put three bricks in a row when the user's screen size supported it.)</p>
+    <p>We worked through the visual design phase in a team of two. Another designer would create one of the key pages of the NJIT site, for a &ldquo;desktop&rdquo; screen size. My job was to break those pages into components, and define each of those components at mobile and tablet screen sizes.</p>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'bricks',
+                'alt': 'One of the bricks, laid out for desktops, tablets, and mobile devices.'
+            }
+        %}
+        <figcaption>
+            An example of one of the bricks laid out at three major breakpoints. Given another chance, I'd have defined the design system's styles and components in the browser directly.
+        </figcaption>
+    </figure>
+    <p>I learned a lot during this process about creating design systems on the fly. The main lesson was that defining truly responsive components, and having those components use shared styles and elements, is infinitely easier when working in actual HTML, CSS, and JavaScript, rather than in a tool like Sketch. If I could do it again, I'd work more closely with a developer during this phase, or on my own, to create and update components in a system like Pattern Lab or Fractal.</p>
+</section>
+
+<section>
+    <h2>After a few months in development, the new design was (partially) live.</h2>
+    <p>Check out <a href="https://njit.edu/">NJIT.edu</a> to see my information architecture and design recommendations in action. (Keep in mind that they're deploying updates in stages, so some sections still haven't been updated.) As the new school year begins, we'll start to see just how much more attractive NJIT is to prospective students.</p>
+</section>
+
+{% include 'partials/footer.twig' %}

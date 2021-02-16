@@ -1,0 +1,27 @@
+<html lang="en-US" class="login-form">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Login Required</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+    </head>
+    <body>
+        <main>
+            {{ pro }}
+            {{ log }}
+            <form method="post" action="/login.php">
+                <h1>This page is password-protected.</h1>
+                <div class="form-group">
+                    <label class="sr-only" for="password">Password</label>
+                    <input name="password" id="mypassword" type="password" class="form-control" placeholder="Password" autofocus>
+                    <input type="hidden" name="dest" value="/projects/{{ slug }}">
+                </div>
+                <button name="Submit" id="submit" class="btn btn-lg btn-default" type="submit">Enter</button>
+            </form>
+        </main>
+    </body>
+</html>

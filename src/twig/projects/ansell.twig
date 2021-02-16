@@ -1,0 +1,88 @@
+{% set imgPath = '/assets/img/projects/ansell/' %}
+{% include 'partials/header.twig' with {
+    'title': 'Ansell',
+    'description': ''
+} %}
+<section>
+    <h1 class="project-title">Ansell <span class="project-dates">2020-2021</span></h1>
+    <div class="summary">
+        <h3>About the project</h3>
+        <p>Ansell had created a series of online tools to allow their salespeople and their customers to review product data, and find the exact set of products that are best for a given application. As a manufacturer of personal protective equipment, choosing the right product isn't just a matter of personal preference — the health and safety of those who will use the products is on the line.</p>
+
+        <h3>Challenge</h3>
+        <p>Because choosing the right product is so vitally important, there are lots of criteria that go into the recommendation. The system needed to collect very detailed information about the nature of the specific dangers inherent to each application, the properties of the products currently in use, and the exact costs of implementing them.</p>
+
+        <h3>My role</h3>
+        <ul>
+            <li>Created a UI kit in Sketch, to represent reusable components throughout the system</li>
+            <li>Managed a team of designers as we each worked on different parts of the application</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>My first task on the project was to create a system of reusable UI components.</h2>
+    <p>This was one of the larger projects I was invloved in at DOOR3, involving a team of three designers and hundreds of application screens over about a year of continuous design and development. Therefore, it was necessary to work from a shared design library from day 1.</p>
+
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'autocomplete-demo',
+                'alt': 'An example of the various states of the UI component we called an autocomplete.'
+            }
+        %}
+        <figcaption>
+            Besides creating examples of each component in all of the possible states, for use in our design comps and for dev handoff, we also created demos of interactivity, such as here for the "autocomplete" component.
+        </figcaption>
+    </figure>
+
+    <p>Because many core requirements had been defined by this point, and even several wireframes, it was clear what components would be necessary. I quickly defined a color palette, a type scale, spacing values, and an icon set, to serve as the basis for all further design work. The next biggest chunk of work was common form fields, like text boxes, select boxes, checkboxes, buttons, and so on. This project also made use of lots of tabular data, so components had to be created for table headers, body cells, footers, and interactivity like sorting, filtering, and pagination. Content components such as cards, modals, and accordions were also defined. And finally, navigational components like the top navigation, tabs, and breadcrumbs.</p>
+
+    <p>Having all of these components at our disposal in Sketch allowed the three of us designers to work and communicate much more easily, especially when most of this project was done under COVID-19 quarantine. Rather than go back and forth over minute details, we could communicate our ideas for new features as a set of design system components. The same was true during developer handoff — rather than treating each page as a unique task, it was easy to point out how each new feature was usually reusing existing components.</p>
+</section>
+
+<section>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'create-assessment',
+                'alt': 'An example of the design for creating a new assessment.'
+            }
+        %}
+        <figcaption>
+            Here's a few of the more representative screens: creating an assessment...
+        </figcaption>
+    </figure>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'cost-performance',
+                'alt': 'An example of the design for reviewing cost performance data.'
+            }
+        %}
+        <figcaption>
+            ...reviewing the "cost performance" of current vs. recommended products...
+        </figcaption>
+    </figure>
+    <figure>
+        {%
+            include 'partials/picture.twig'
+            with {
+                'baseURL': imgPath ~'add-current-product',
+                'alt': 'An example of the design for adding a current product to the cost performance analysis.'
+            }
+        %}
+        <figcaption>
+            ...and adding a current product to the cost performance analysis.
+        </figcaption>
+    </figure>
+
+    <h2>The product is still being developed and released, but feedback so far has been positive.</h2>
+
+    <p>From the beginning, the goal was to take what could be a subjective, difficult process, and make it standardized, and easily repeatable. New employees, and eventually even customers themselves, should be able to use the system to make correct product recommendations, with a minimum amount of upfront training.</p>
+    <p>While it did not get to see this project be released, initial feedback from a set of salespeople who got to review the protoype had been positive. They were eagerly awaiting the chance to use the product themselves in their day-to-day work.</p>
+</section>
+{% include 'partials/footer.twig' %}

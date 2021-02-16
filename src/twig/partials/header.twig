@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Rob Kovacs | {% if title %}{{ title }}{% else %}UX designer based in New York City.{% endif %}</title>
+        <meta name="description" content="{{ description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2a323e">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#f5f7f8">
+
+        <link rel="stylesheet" href="https://use.typekit.net/pst3jhs.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@7/dist/video-js.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+    </head>
+    <body>
+        <header>
+            <a href="/"><img src="/assets/img/logo.svg" alt="Rob Kovacs"></a>
+            <div class="header__button"><button aria-controls="header__menu" aria-expanded="false" aria-label="Open navigation">Menu</button></div>
+            <div class="header__menu" id="header__menu">
+                <nav>
+                    <button aria-controls="header__menu" aria-expanded="false" aria-label="Close navigation" tabindex="0">&times;</button>
+                    <ul>
+                        <li>
+                            <a href="/" {% if is_current_path('home') %} class="active"{% endif %}>Projects</a>
+                        </li>
+                        <li>
+                            <a href="/assets/pdf/resume.pdf">R&eacute;sum&eacute;</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/robkovacs46/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </li>
+                    </ul>
+                </nav>
+                <dl>
+                    <dt>Call Me</dt>
+                    <dd>(347) 948-4688</dd>
+
+                    <dt>Email Me</dt>
+                    <dd>rob@robkovacs.com</dd>
+                </dl>
+            </div>
+        </header>
+        <main>

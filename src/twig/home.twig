@@ -1,0 +1,20 @@
+{% include 'partials/header.twig' with {
+    'description': 'Rob Kovacs is a UX designer based in Brooklyn, NY. This is his portfolio.'
+} %}
+
+<section>
+    <h1>Hi! I'm Rob Kovacs, a digital product designer based in Brooklyn, NY.</h1>
+    <p>My specialities are user research, information architecture, and interaction design. I also have some development experience that helps when it's time to communicate designs to developers on my team.</p>
+    <p>To learn more about me or my work, contact me at <a href="mailto:rob@robkovacs.com">rob@robkovacs.com</a>.</p>
+</section>
+
+<div class="grid">
+    {% for item in projects %}
+        {% if item.complete %}
+            {% set imgBaseURL = '/assets/img/projects/' ~item.slug ~'/thumb' %}
+            {% include 'partials/portfolio-grid-item.twig' with {item: item, imgBaseURL: imgBaseURL }  %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% include 'partials/footer.twig' %}

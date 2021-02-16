@@ -1,0 +1,12 @@
+<div class="grid-item">
+    <a href="projects/{{ item.slug }}">
+        {% include 'partials/picture.twig' with { 'baseURL': imgBaseURL, 'alt': item.name } %}
+
+        <div class="grid-item__title">
+            {% if item.protected %}<em class="alert-protected">Protected</em>{% endif %}
+            <span>
+                {% if item.protected %}&ldquo;{{ item.name }}&rdquo;{% else %}{{ item.name }}{% endif %}
+            </span>
+        </div>
+    </a>
+</div>
