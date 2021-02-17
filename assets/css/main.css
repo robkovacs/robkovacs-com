@@ -382,33 +382,15 @@ section > :not(figure) {
 
 @media (min-width: 60rem) {
     .project-title {
-        /* display: inline-block;
-        padding: 2rem;
-        z-index: -1;*/
         position: relative;
-        font-weight: 900;
-        font-family: var(--body-font-family);
-        /* background-color: var(--text-lightest);
-        color: #fff;
-        width: auto;
-        text-align: center;
-        min-width: 20rem;
-        margin-top: 2rem;
-        margin-bottom: -1.5rem;
-        margin-left: 2rem; */
+        font-weight: 700;
+        font-family: var(--heading-font-family);
     }
-}
-
-@media (min-width: 1441px) {
-    /* .project-title {
-        margin-left: -2rem;
-    } */
 }
 
 .summary {
     font-size: 1rem;
     background-color: #fff;
-    /* border: 1px solid #e6e6e6; */
     padding: 1rem 2rem;
     box-shadow:
       0 1.1px 3.6px rgba(0, 0, 0, 0.028),
@@ -419,16 +401,6 @@ section > :not(figure) {
 
 section + section {
     margin-top: 4rem;
-}
-
-@media (min-width: 60rem) {
-    /* .summary {
-        margin-bottom: -4rem;
-    } */
-
-    /* section + section {
-        margin-top: 8rem;
-    } */
 }
 
 /*******
@@ -444,7 +416,6 @@ figure {
 
 figure img,
 figure .video-js {
-    /* border: 1px solid #e6e6e6; */
     box-shadow:
       0 1.1px 3.6px rgba(0, 0, 0, 0.028),
       0 3px 10px rgba(0, 0, 0, 0.04),
