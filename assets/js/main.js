@@ -30,6 +30,7 @@
         sr.reveal("figure");
     }
 
+    /*  Open the menu on mobile when you click the [ MENU ] button */
     document.querySelector('.header__button button').addEventListener('click', function () {
         this.blur();
         this.setAttribute('aria-expanded', true);
@@ -37,11 +38,15 @@
         utils.addClass(document.querySelector('html'), 'js--header__menu--open');
     });
 
+    /*  Close the menu on mobile when you click the X button */
     document.querySelector('.header__menu button').addEventListener('click', function () {
         this.setAttribute('aria-expanded', false);
         document.querySelector('.header__button button').setAttribute('aria-expanded', false);
         utils.removeClass(document.querySelector('html'), 'js--header__menu--open');
     });
+
+    /* When the screen gets too big, and the mobile menu disappears,
+    remove the class that says it's open */
 
     window.addEventListener('resize', function () {
         if (window.matchMedia('(min-width: 60rem)').matches) {
