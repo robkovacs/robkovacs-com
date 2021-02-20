@@ -47,7 +47,6 @@
 
     /* When the screen gets too big, and the mobile menu disappears,
     remove the class that says it's open */
-
     window.addEventListener('resize', function () {
         if (window.matchMedia('(min-width: 60rem)').matches) {
             utils.removeClass(document.querySelector('html'), 'js--header__menu--open');
